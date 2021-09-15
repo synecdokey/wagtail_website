@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     "django.contrib.admindocs",
     "mod_wsgi.server",
     "analytical",
+    "wagtailmarkdown",
 )
 
 MIDDLEWARE = [
@@ -174,6 +175,12 @@ WAGTAILSEARCH_BACKENDS = {
     "default": {"BACKEND": "wagtail.contrib.postgres_search.backend",},
 }
 
+
+WAGTAILMARKDOWN = {
+    # We probably want to configure this more, see
+    # https://github.com/torchbox/wagtail-markdown
+    "autodownload_fontawesome": True,
+}
 
 # Wagtail settings
 
